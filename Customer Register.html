@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Register</title>
+            <link rel="stylesheet" href="Customer Register.css">
+            <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+            <script src ="Customer Register.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="Interbus logo.jpg" />
+        </header>
+        <div>
+            <p class="large">Please input the following details.</p><p class="small"> * means required</p>
+            </br>
+            <h2>Section 1: Personal Details</h2>
+            <form id="form">
+                <label for="first name">First name *</label>
+                <input name="first name" type="text" required id="first name" maxlength="20"></br>  <!--todo validate and title if time-->
+                <label for="surname">Surname *</label>
+                <input name="surname" type="text" required id="surname" maxlength="40"></br>
+                <label for="email">E-mail address *</label>
+                <input name="email" type="email" required id="email" maxlength="325"></br>
+                <label for="phone no">Phone number</label>
+                <input name="phone no" type="tel" id="phone no" maxlength="11"></br>
+                <label for="address">Address</label>
+                <input name="address" type="text" id="address" maxlength="50"></br>
+                <label for="town">Town</label>
+                <input name="town" type="text" id="town" maxlength="100"></br>
+                <label for="county">County</label>
+                <input name="county" type="text" id="county" maxlength="20"></br>
+                <label for="postcode">Postcode</label>
+                <input name="postcode" type="postal" pattern="[A-Z]{2}\d{2} \d{1}[A-Z]{2}" id="postcode" maxlength="8"></br>
+            <h2>Section 2: Account Details</h2>
+                <label for="username">Username *</label>
+                <input name="username" type="text" pattern="([A-Z]|[a-z]|_){1}([A-Z]|[a-z]|[0-9]|_){0,}" required id="username" maxlength="25"></br>
+                <label for="password">Password *</label>
+                <input name="password" type="password" id="password" required></br>
+                <label for="password confirmation">Confirm password *</label>
+                <input name="password confirmation" type="password" id="password_conf" required></br></br>
+                <input name="promos" type="checkbox" class="checkbox">
+                <label for="promos">I would like to receive promotional offers via email</label></br>
+            <h2>Section 3: Bank Details</h2>
+                <label for="card no">Card number *</label>
+                <input name="card no" type="text" pattern="[0-9]{16}" minlength="16" maxlength="16" required></br>    <!--using type="number" doesn't account for numbers starting with 0-->
+                <label for="sec code">Security code *</label>
+                <input name="sec code" type="text" pattern="[0-9]{3}" minlength="3" maxlength="3" required></br>
+                <label for="exp date">Expiry date *</label>
+                <input name="exp date" type="month" required></br>
+                <label for="cardholder name">Cardholder name *</label>
+                <input name="cardholder name" type="text" maxlength="60" required></br>  
+                <input name="register" type="submit" value="Register" id="register">                         
+            </form>
+        </div>
+    </body>
+</html>
